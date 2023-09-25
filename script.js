@@ -14,22 +14,19 @@ saveButtons.forEach((button) => {
   });
 });
 
-  // Apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. 
+  // Apply the past, present, or future class to each time blovk
 
   // Get current hour 
 const currentHour = dayjs().hour();
 
 const timeBlocks = document.querySelectorAll('.time-block');
-
-// Loop through each time block
 timeBlocks.forEach((timeBlock) => {
   console.log(currentHour)
 
   const timeBlockId = parseInt(timeBlock.id)
   
 
-  // Compare the timeBlockId with the currentHour to determine past present or future i.e. color 
+  // comparing the id to the current hour to determine past present or future 
   if (timeBlockId < currentHour) {
     timeBlock.classList.add('past');
   } else if (timeBlockId == currentHour) {
@@ -53,8 +50,6 @@ textareaElements.forEach((textarea) => {
 
  // Display the current date at the header of the page.
 
-
-// Function to update the current date in the specified element
 function CurrentDate() {
   // Get the current date
   const currentDate = new Date();
